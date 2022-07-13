@@ -1,0 +1,10 @@
+build/
+.cache/
+utils/setup-postgres-db.sh
+utils/recreate-postgres-db.sh
+utils/recreate-medusa-db.sh
+.tmp/
+.idea/
+.env
+.env.example
+node_modules/
