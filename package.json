@@ -4,6 +4,12 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
+    "dev-env": "heroku config:set NODE_ENV=development && NODE_ENV=development npm run develop",
+    "prod-env": "heroku config:set && NODE_ENV=production npm run start",
+    "env-path": "ENV_PATH=/Users/ricardobento/Documents/STRAPI/strapi-heroku/.env npm run start",
+    "heroku-change-env-dev": "heroku config:set NODE_ENV=development",
+    "heroku-change-env-prod": "heroku config:set NODE_ENV=production",
+    "heroku": "heroku config:set NODE_ENV=production && git add . && git commit -m 'fail' && git push heroku HEAD:main && heroku open",
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
@@ -13,6 +19,7 @@
     "axios": "^0.23.0",
     "knex": "0.21.18",
     "pg": "^8.7.1",
+    "slugify": "^1.6.5",
     "sqlite3": "5.0.6",
     "strapi": "3.6.9",
     "strapi-admin": "3.6.8",
@@ -23,6 +30,8 @@
     "strapi-plugin-i18n": "3.6.8",
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-provider-email-nodemailer": "^3.6.10",
+    "strapi-provider-upload-cloudinary": "^3.6.10",
     "strapi-utils": "3.6.8"
   },
   "author": {
